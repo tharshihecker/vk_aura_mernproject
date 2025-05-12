@@ -1,0 +1,230 @@
+/* UserComponent specific styles */
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: left 0.4s ease;
+    z-index: 1999;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .sidebar a:hover {
+    background: rgba(0, 123, 255, 0.2);
+    color: #007bff;
+  }
+  
+  .sidebar-logout {
+    margin-top: auto;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.1rem;
+  }
+  
+  .sidebar-logout:hover {
+    background-color: #c82333;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 98%;
+    height: 80px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    display: flex;
+    overflow: visible;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  
+  .nav-left, .nav-center, .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-left {
+    flex: 0 0 50px;
+    justify-content: flex-start;
+  }
+  
+  .nav-center {
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .dashboard-title {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .nav-right {
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .menu-icon {
+    margin-left: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .chat-icon {
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  .profile-wrapper {
+    cursor: pointer;
+    
+  }
+  
+  .profile-photo {
+    width: 65px;
+    height: 65px;
+    vertical-align: top;
+    border-radius: 80%;
+    object-fit: cover;
+    border: 2px solid #007bff;
+  }
+  
+  .logout-btn {
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Notification */
+  .notification {
+    margin-right: 20px !important;
+    margin-left: 20px;
+  }
+  
+  .dropdownbell {
+    z-index: 9999 !important;
+    margin-top: 10px;
+    position: absolute !important;
+    margin-right: 20px !important;
+  }
+  
+  .dropdownbell .ant-dropdown-menu {
+    max-height: 350px;
+    overflow-y: auto;
+    width: 320px;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+  }
+  
+  .dropdownbell .ant-dropdown-menu-item {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .dropdownbell .ant-dropdown-menu-item:hover {
+    background-color: #e6f7ff;
+  }
+  
+  .offer-item.read {
+    font-weight: normal;
+    color: #555;
+  }
+  
+  .offer-item.unread {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .mark-read-bar {
+    text-align: center;
+    margin-top: 10px;
+    padding: 8px 0;
+    color: #1890ff;
+    font-weight: 500;
+    cursor: pointer;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  .mark-read-bar:hover {
+    color: #096dd9;
+  }
+  
+  .ant-badge-count {
+    background-color: #ff4d4f !important;
+    color: white;
+    font-size: 12px;
+    box-shadow: 0 0 0 1px #fff inset;
+  }
+  
+  .no-offers {
+    text-align: center;
+    padding: 10px;
+    color: #999;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-center h2 {
+      font-size: 1.2rem;
+    }
+    .sidebar {
+      width: 200px;
+    }
+  }
+  

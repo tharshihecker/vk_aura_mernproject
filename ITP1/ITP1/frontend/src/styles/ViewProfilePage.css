@@ -1,0 +1,77 @@
+.view-profile-container {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 35px;
+  min-height: 1000px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #0c0b0b;
+  transition: all 0.3s ease-in-out;
+}
+.view-profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #007bff;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.view-profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+.view-profile-field {
+  font-size: 15px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.view-profile-field strong {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.view-action-btn {
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #3498db;
+  color: #fff;
+  margin: 0.25em;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-action-btn::after {
+  content: "";
+  position: absolute;
+  background: rgba(255,255,255,0.2);
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.view-action-btn:hover::after {
+  width: 100%;
+}
+
+.view-action-btn:hover {
+  transform: translateY(-2px);
+}

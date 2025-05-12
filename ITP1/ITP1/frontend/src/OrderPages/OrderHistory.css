@@ -1,0 +1,162 @@
+.order-history-container1 {
+  width: 1300px;
+  margin-top: 60px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background: rgba(68, 68, 68, 0.5);
+}
+
+/* Grid wrapper for cards */
+.order-grid1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Updated card layout */
+.order-card1 {
+  background: rgba(245, 245, 245, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px !important;
+  flex: 1 1 calc(33.333% - 40px); /* 3 cards per row */
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.search-bar1{
+  width: 500px ;
+  height: 15px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+h2, h3, h4 {
+  color: #333333;
+}
+
+.OrderHis1 {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(1, 22, 114);
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(153, 151, 151, 0.3);
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+}
+
+.back-button {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-size: 16px;
+}
+
+.back-button:hover {
+  background: #0056b3;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .order-history-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .order-card {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .back-button {
+    font-size: 14px;
+    padding: 8px 16px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* Medium devices (tablets, 600px to 900px) */
+@media (max-width: 900px) {
+  .order-history-container {
+    max-width: 90%;
+  }
+
+  .order-card {
+    padding: 12px;
+  }
+
+  .back-button {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+}
+
+/* Large devices (laptops, 900px to 1200px) */
+@media (max-width: 1200px) {
+  .order-history-container {
+    max-width: 80%;
+  }
+}
+/* Responsive layout */
+@media (max-width: 992px) {
+  .order-card {
+    flex: 1 1 calc(50% - 40px); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .order-card {
+    flex: 1 1 100%; /* 1 per row on phones */
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(44, 39, 39, 0.5);
+  color: white;
+  width: 100vw;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  position: relative;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}

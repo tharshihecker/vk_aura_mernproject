@@ -1,0 +1,55 @@
+.feedback-item {
+  margin-bottom: 20px; /* Add space between feedback items */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center; /* Centers all content */
+}
+
+.star-rating {
+  margin-bottom: 10px;
+}
+
+.feedback-item p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.feedback-photo {
+  max-width: 200px;
+  display: block;
+  margin: 10px auto; /* Centers the image horizontally */
+  border-radius: 5px; /* Optional: Adds rounded corners to the image */
+}
+
+/* Button Container - Centers buttons */
+.feedback-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin-top: 10px;
+}
+
+/* Styles for both buttons to be equal size */
+.feedback-button {
+  width: 120px; /* Fixed width to make both buttons the same size */
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.feedback-button:hover {
+  background-color: #0056b3;
+}
+
+.feedback-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

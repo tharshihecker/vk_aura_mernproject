@@ -1,0 +1,424 @@
+.deleting-msg {
+  margin: 10px 0;
+  font-size: 22px;
+}
+.maincontent {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 10%;
+  margin-right: -15%;
+  padding: 100px;
+  background-color: #ffffff; /* Solid white */
+  border: 10px solid #000000; /* Solid black */
+  color: #000000; /* Solid black text */
+   min-height: 50vh; /* Ensures minimum height */
+  overflow-y: auto; /* Only vertical scrolling if needed */
+  transition: margin-left 0.1s ease;
+}
+.search-result-count {
+  margin: 10px 0 20px;
+  font-size: 1.3rem;
+   font-weight: 700;
+  color: #f60707;
+}
+
+
+.modal {
+  position: fixed;
+  top: -25px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(114, 95, 95, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ✅ centers vertically */
+  z-index: 2000;
+  padding: 20px; /* fallback spacing for smaller screens */
+}
+
+
+
+.modal-content {
+  background: #fff;
+  border-radius: 8px;
+  width: 90%; /* increased from 90% */
+  max-width: 800px; /* increased from 800px */
+  max-height: 88vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 20px 20px 40px 20px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+/* Increase font size for the main page */
+
+
+.close {
+  position: absolute;
+  top: 12px; right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Standard tables */
+.standard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.standard-table th,
+.standard-table td {
+  
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: left;
+  color: #000000;
+}
+.standard-table th {
+  background-color: #4b6cb7;
+    color: white;
+    font-weight: bold;
+}
+
+/* Buttons */
+.admin-user-btn {
+  margin: 0 6px;
+  padding: 12px 20px; /* Increased padding for larger size */
+  font-size: 0.8rem;  /* Slightly larger text */
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+
+
+.admin-user-btn.cancel {
+  
+  background: #dc3545;
+}
+.admin-user-btn:hover {
+  transform: scale(1.05);
+
+  opacity: 0.9;
+}
+.go-back-btn {
+  margin-top: 1rem;
+  padding: 10px 16px;
+  background: #28a745;
+  color: #fff;
+  border: none; border-radius: 4px;
+  cursor: pointer; transition: background .2s;
+}
+.go-back-btn:hover { background: #218838; }
+
+/* User info inside modal */
+.user-info {
+  display: flex;
+  justify-content: space-between; /* space between pic and text */
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #131212;
+  margin-bottom: 1.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-wrap: wrap;
+}
+
+.user-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+.user-profile-pic-large {
+  width: 260px;
+  height: 260px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-left: 60px; /* creates space from the text */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.user-fields p {
+  margin: 4px 0;
+}
+.order-history,
+.feedback-history {
+  margin-top: 1.5rem;
+}
+
+
+/* Order history */
+.order-history {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 85%; /* ensure full width */
+}
+
+.order-card {
+  width: 100% !important;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.4); /* glass effect */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  max-width: 100% !important;
+  overflow-x: auto;
+}
+.order-header {
+  display: flex;
+  font-weight: 1.2rem;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.order-id { font-weight: 600; font-size: 1.2rem;}
+.order-date { color: #666; font-size: 1.2rem; font-weight: bold;}
+
+.items-table {
+  width: 100% !important;
+  table-layout: auto; 
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+
+.items-table th,
+.items-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+/* Optional: bold header background */
+.items-table th {
+  background: #4b6cb7;
+  color: white;
+  font-weight: bold;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+.order-status { font-style: italic; }
+.order-final-total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+/* No orders message */
+.no-orders {
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  color: #777;
+  font-size: 1.1rem;
+}
+ td {
+  font-weight: bolder;
+
+}
+
+.status-pending {
+  color: #f4a261; /* Soft orange */
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.status-shipped {
+  color: #4a90e2; /* Medium calm blue */
+  font-weight: bold;
+  font-size: 1.3rem;
+
+}
+
+.status-delivered {
+  color: #2a9d8f; /* Gentle teal green */
+  font-weight: bold;
+  font-size: 1.3rem;
+
+}
+
+.status-removed {
+  color: #eb0a33; /* Muted coral red */
+  font-weight: bold;
+  font-size: 1.3rem;
+
+}
+
+.status-canceled {
+  color: #b00020; /* Softer deep red, less intense than pure red */
+  font-weight: bold;
+  font-size: 1.3rem;
+
+}
+
+.status-success {
+  color: #70e000; /* Soft lime green */
+  font-weight: bold;
+  font-size: 1.3rem;
+
+}
+
+
+
+/* Summary counts */
+.admin-dashboard-container .maincontent .summary {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+.admin-dashboard-container .maincontent .summary p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Search box wrapper */
+.admin-dashboard-container .maincontent .search-box {
+  margin-bottom: 1.5rem;
+
+}
+
+.admin-dashboard-container tr:hover {
+  background-color: #e2e8f0; /* Hover effect for table rows */
+}
+/* Search input */
+.admin-dashboard-container .maincontent .search-input {
+  width: 550px ;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #0c0c0c;
+  border-radius: 0.375rem; /* 6px */
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000000;
+  transition: border-color 0.2s;
+}
+.admin-dashboard-container .maincontent .search-input::placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.admin-dashboard-container .maincontent .search-input:focus {
+  outline: #000000;
+  border-color: #000000; /* or your primary accent */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+/* 1. Fix column widths so the table never grows beyond its container */
+
+/* 2. Allow long words/URLs to break and wrap to new lines */
+.standard-table th,
+.standard-table td {
+  white-space: normal;       /* allow wrapping */
+  word-wrap: break-word;     /* break long words */
+  overflow-wrap: anywhere;   /* ensure even single long strings break */
+}
+
+/* 3. (Optional) If you want to cap a specific column—e.g. Address—at 200px */
+.standard-table td:nth-child(5),
+.standard-table th:nth-child(5) {
+  max-width: 200px;         /* limit width */
+}
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  background: linear-gradient(45deg, #ff8c42, #ffd700);
+  background-clip: text;
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  margin-top: 45px; /* Added this line to move the header slightly down */
+}
+.feedback-comment {
+  margin-top: 10px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #111010;
+  padding-left: 10px;
+  padding-right: 10px;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.feedback-likes {
+  margin-top: 6px;
+  font-size: 1.0rem;
+  color: #111111;
+  font-weight:bold;
+  padding-left: 10px;
+}
+/* Reduce textarea height and spacing */
+.modal-content textarea {
+  width: 100%;
+  min-height: 60px; /* ⬅️ reduced from 100px */
+  resize: vertical;
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #f60b0b;
+  background: #fdfdfd;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  transition: border-color 0.3s ease;
+}
+
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  background: #fff;
+}
+
+/* Button alignment and size */
+.modal-actions {
+  display: flex;
+  justify-content: center; /* ⬅️ center horizontally */
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* Larger buttons */
+.modal-actions .admin-user-btn {
+  padding: 14px 28px;  /* ⬅️ increased size */
+  font-size: 1rem;     /* ⬆️ larger font */
+}
+.disabled-btn {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}

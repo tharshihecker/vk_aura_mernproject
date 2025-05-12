@@ -1,0 +1,96 @@
+/* Container adjustments for form */
+.form-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.form-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Left-side image section */
+.image-upload {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-label {
+  cursor: pointer;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.image-placeholder {
+  width: 250px;
+  height: 250px;
+  border: 2px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.image-placeholder img {
+  max-width: 100%;
+  height: auto;
+}
+
+.empty-placeholder {
+  color: gray;
+  font-size: 14px;
+}
+
+/* Right-side form section */
+.product-form {
+  flex: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.submit-button {
+  grid-column: span 2;
+  padding: 10px 20px;
+  background-color: #1E88E5;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #602cc1;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,214 @@
+/* === Container === */
+.order-report-container {
+    padding: 2rem;
+    background: #f9fafb;
+    min-height: 100vh;
+    margin-top: 60px;
+    margin-left: 160px;
+    border-color: black;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* === Title === */
+  .order-report-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+    letter-spacing: 1px;
+  }
+  
+  /* === Filters Section === */
+  .filters-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
+  
+  .date-picker,
+  .filter-dropdown,
+  .search-input {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    background-color: #fff;
+    min-width: 160px;
+  }
+  
+  .apply-filter-button {
+    background-color: #22c55e;
+    color: #fff;
+    padding: 0.45rem 1.2rem;
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .apply-filter-button:hover {
+    background-color: #16a34a;
+  }
+  
+  /* === Summary Cards === */
+  .summary-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+    justify-content: center;
+  }
+  
+  .summary-card {
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    min-width: 130px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    background-color: #f0f0f0;
+  }
+  
+  .summary-card.total {
+    background-color: #e0e7ff;
+    color: #1d4ed8;
+  }
+  
+  .summary-card.pending {
+    background-color: #fef9c3;
+    color: #92400e;
+  }
+  
+  .summary-card.shipped {
+    background-color: #dbeafe;
+    color: #2563eb;
+  }
+  
+  .summary-card.delivered {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+  
+  .summary-card.removed {
+    background-color: #e5e7eb;
+    color: #374151;
+  }
+  
+  .summary-card.cancelled {
+    background-color: #fee2e2;
+    color: #b91c1c;
+  }
+  
+  
+  /* === Table === */
+  .order-report-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.85rem;
+  }
+  
+  .order-report-table thead {
+    background-color: #f1f5f9;
+  }
+  
+  .order-report-table th,
+  .order-report-table td {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+    white-space: nowrap;
+      
+      
+  }
+  .order-report-table td:nth-child(4),
+  .order-report-table th:nth-child(4) {
+    max-width: 220px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  
+  .order-report-table th {
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  .order-report-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  
+  .order-report-table tbody tr:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  /* === Report Buttons === */
+  .report-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .report-download-button {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .report-download-button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* === Chart === */
+  .chart-section {
+    margin-top: 2.5rem;
+  }
+  
+  .chart-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .clear-filter-button {
+    background-color: #f87171;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+  }
+  
+  .clear-filter-button:hover {
+    background-color: #dc2626;
+  }
+  

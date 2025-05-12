@@ -1,0 +1,248 @@
+/* Common Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border: 2px solid rgb(0, 0, 0,0.5); 
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 2px solid  rgb(0, 0, 0,0.5); 
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+
+
+button {
+  padding: 6px 12px;
+  margin-right: 10px;
+  background-color:#1E88E5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #374495;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.Delete {
+  background-color: #f44336;
+}
+
+button.Delete:hover {
+  background-color: #e57373;
+}
+
+button.edit {
+  background-color: #008CBA;
+}
+
+button.edit:hover {
+  background-color: #007B9D;
+}
+
+img {
+  border-radius: 5px;
+}
+
+ul {
+  padding-left: 15px;
+}
+
+/* Custom styles for Tables */
+table th,
+table td {
+  font-size: 14px;
+}
+
+table td {
+  color: #333;
+}
+
+table td img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+/* Add Package / Invoice / Product Section */
+.add-button {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.add-button a {
+  text-decoration: none;
+}
+
+button.add {
+  background-color: #624dd8;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+}
+
+button.add:hover {
+  background-color: #543fd6;
+}
+
+.no-data {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0px; 
+  padding-bottom: 20px;
+}
+
+
+.tablelist {
+  background-color:  rgba(250, 250, 250,0.1);
+}
+.create-invoice-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.total-sales {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.filter-container {
+  display: flex;
+  gap: 20px; /* ✅ reduced gap */
+  align-items: center;
+  width: 100%;
+}
+
+.create-invoice-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px; /* Increase this value to increase the gap */
+  align-items: center; /* Ensures button and input are aligned */
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.search-container input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Increase this value to make the input field wider */
+}
+
+
+ .date-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.search-container input, .date-container input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 220px;
+}
+
+.search-container button, .date-container button {
+  padding: 10px 16px;
+  background-color: #2196F3;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-container button:hover, .date-container button:hover {
+  background-color: #0b7dda;
+}
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+  }
+
+  .search-container, .date-container {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+.totals-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px; 
+  
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.totals-box {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  min-width: 200px;
+}
+
+.totals-box h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #374495;
+}
+
+.totals-box p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}

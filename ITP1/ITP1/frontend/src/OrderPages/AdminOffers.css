@@ -1,0 +1,62 @@
+/* AdminOffers.css */
+
+.admin-offers-container {
+  max-width: 900px;
+  margin-top: 110px ;
+  margin-left: 80px  ;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.admin-offer-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #114fac;
+  margin-bottom: 30px;
+ 
+}
+
+.admin-offer-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.admin-offer-search {
+  margin-bottom: 24px !important;
+  height: 38px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Edit and Delete buttons */
+.edit-btn {
+  background-color: #1890ff !important;
+  color: #fff !important;
+  border-color: #1890ff !important;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #40a9ff !important;
+  border-color: #40a9ff !important;
+}
+
+.delete-btn {
+  color: #f5222d !important;
+  border-color: #f5222d !important;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #ffccc7 !important;
+  border-color: #ff4d4f !important;
+}

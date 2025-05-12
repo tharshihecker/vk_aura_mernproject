@@ -1,0 +1,185 @@
+/* General Setup */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #2c3e50;
+  z-index: 1000;
+}
+
+
+/* Navbar Sections */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Welcome Text */
+.admin-welcome-text {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  margin-right: 120px;
+  margin: 10px 230px 20px 200px;
+  white-space: nowrap;
+}
+
+/* Profile Section */
+.admin-profile-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-profile-wrapper {
+  cursor: pointer;
+}
+
+.admin-profile-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff;
+}
+
+/* Buttons */
+.back-btn,
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  color: white;
+}
+
+.back-btn {
+  background-color: #4CAF50;
+}
+
+.back-btn:hover {
+  background-color: #45a049;
+}
+
+.logout-btn {
+  background-color: #f44336;
+}
+
+.logout-btn:hover {
+  background-color: #e53935;
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+  background: none;
+  border: none;
+  margin-left: 30px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease, width 0.3s ease;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar.open ~ .main-content {
+  margin-left: 250px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar-menu li {
+  margin-bottom: 10px;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: #0a0909;
+  font-size: 18px;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  background-color: #bebebe;
+}
+
+/* Nested Menu */
+.nested-menu {
+  padding-left: 20px;
+}
+
+.nested-menu li {
+  background-color: #bebebe;
+  margin-bottom: 5px;
+}
+
+.nested-menu li a {
+  text-decoration: none;
+  color: #010101;
+  font-size: 16px;
+}
+
+.nested-menu li a:hover {
+  color: #3498db;
+}
+
+/* Custom class for spacing */
+.Admin {
+  margin-top: 110px;
+}

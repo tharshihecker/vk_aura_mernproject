@@ -1,0 +1,141 @@
+/* Container */
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  
+  /* Step item layout */
+  .step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+    transition: transform 0.2s ease;
+  }
+  
+  /* Circle for icon */
+  .step-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Active step highlight */
+  .step-item.active .step-icon {
+    background-color: #e7f0fc;
+    border-color: #4a7eb5;
+  }
+  
+  /* Main status emoji (🚚 📦 etc) */
+  .base-icon {
+    font-size: 22px;
+    color: #adb5bd;
+    z-index: 1;
+  }
+  
+  .step-item.active .base-icon {
+    color: #4a7eb5;
+  }
+  
+  /* Tick icon directly OVER the base icon */
+  .tick-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #000000;
+    background-color: rgba(96, 221, 84, 0.568);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Step label below the icon */
+  .step-label {
+    font-size: 13px;
+    margin-top: 6px;
+    color: #495057;
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+  
+  .step-item.active .step-label {
+    color: #196bc2;
+  }
+  
+  /* Hover animation */
+  .step-item:hover .step-icon {
+    box-shadow: 0 0 6px rgba(74, 126, 181, 0.2);
+    transform: scale(1.05);
+  }
+  
+  /* Cancelled/Removed status badges */
+  .cancel-label,
+  .remove-label {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cancel-label {
+    background-color: rgba(255, 0, 0, 0.07);
+    color: #d00000;
+    border: 1px solid rgba(255, 0, 0, 0.15);
+  }
+  
+  .remove-label {
+    background-color: rgba(255, 0, 0, 0.07);
+    color: #d30707;
+    border: 1px solid rgba(255, 0, 0, 0.15);
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 500px) {
+    .progress-bar {
+      gap: 18px;
+    }
+  
+    .step-icon {
+      width: 42px;
+      height: 42px;
+    }
+  
+    .base-icon {
+      font-size: 20px;
+    }
+  
+    .tick-icon {
+      font-size: 20px;
+      padding: 1px 4px;
+    }
+  
+    .step-label {
+      font-size: 12px;
+    }
+  }
+  

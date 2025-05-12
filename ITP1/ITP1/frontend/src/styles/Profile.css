@@ -1,0 +1,207 @@
+.profile-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  min-height: 1100px; /* 🔁 allows container to grow with content */
+  padding-bottom: 80px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  color: #0c0b0b;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  background: linear-gradient(45deg, #ff8c42, #ffd700);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  position: relative;
+  top: -20px;
+}
+
+.success-message {
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #c62828;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-info > div {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-pic-section {
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #007bff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin: 8px 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #0c0b0b;
+}
+
+.profile-info strong {
+  color: #0b0b0b;
+}
+
+.profile-input {
+  width: 100%;
+  min-height: 42px;
+  padding: 12px 16px;
+  border: 2px solid #090909;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #1c1c1c;
+  text-align: left;
+  transition: border 0.3s ease;
+}
+
+.profile-input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+
+/* Primary buttons */
+.action-btn {
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  width: 220px !important;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  margin: 0.25em;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.4s ease;
+}
+
+.action-btn:hover::after {
+  left: 0;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+}
+
+.action-btn:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Cancel/remove buttons */
+.cancelremove {
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  width: 220px !important;
+
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #e74c3c;
+  color: #fff;
+  margin: 0.25em;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cancelremove:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(192, 57, 43, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .profile-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .profile-input,
+  .action-btn,
+  .cancelremove {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+}

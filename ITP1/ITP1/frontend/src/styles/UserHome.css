@@ -1,0 +1,263 @@
+
+
+/* Overall Dashboard Container */
+.dashboard-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.01);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  flex: 1;
+  width: 100%;
+  padding: 120px 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Carousel Section */
+.carousel-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.carousel-final-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+
+.package-priest-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+}
+
+.package-card, .priest-card {
+  width: 250px;
+  background: #ffffffcc;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.package-card:hover, .priest-card:hover {
+  transform: scale(1.05);
+}
+
+.card-heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: #374495;
+  margin-bottom: 15px;
+}
+
+.package-image, .priest-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.side-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.side-arrow-button {
+  background-color: rgba(255,255,255,0.8);
+  border: 2px solid #aaa;
+  font-size: 2rem;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.side-arrow-button:hover {
+  background-color: rgba(180, 180, 180, 0.9);
+  transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(44, 39, 39, 0.5);
+  color: white;
+  width: 100vw;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  position: relative;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #f1f1f1;
+}
+
+/* Logout Modal */
+.admin-logout-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.admin-logout-modal-box {
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.admin-logout-emoji-animation {
+  margin-bottom: 1.5rem;
+}
+
+.admin-logout-animated-emoji {
+  width: 300px;
+  height: 250px;
+}
+
+.admin-logout-modal-box p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-logout-modal-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.admin-logout-yes-btn,
+.admin-logout-no-btn {
+  padding: 1.1rem 2.2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+}
+
+.admin-logout-yes-btn {
+  background: #e53935;
+  color: #fff;
+}
+
+.admin-logout-yes-btn:hover {
+  background: #c62828;
+  transform: scale(1.08);
+}
+
+.admin-logout-no-btn {
+  background: #66bb6a;
+  color: #fff;
+}
+
+.admin-logout-no-btn:hover {
+  background: #4caf50;
+  transform: scale(1.08);
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .carousel-final-box {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .package-priest-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .side-buttons {
+    flex-direction: row;
+  }
+  .dashboard-content {
+    padding: 100px 1rem 2rem 1rem;
+  }
+}
+
+/* Background Images Animation */
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: changeBackground 30s infinite alternate ease-in-out;
+  overflow-x: hidden;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url('backimg2.jpg');
+  }
+  20% {
+    background-image: url('img3.webp');
+  }
+  40% {
+    background-image: url('img4.webp');
+  }
+  60% {
+    background-image: url('backimg3.jpg');
+  }
+  80% {
+    background-image: url('img5.jpg');
+  }
+  100% {
+    background-image: url('backimg4.jpg');
+  }
+}

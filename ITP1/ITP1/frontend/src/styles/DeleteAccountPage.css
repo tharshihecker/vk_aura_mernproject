@@ -1,0 +1,145 @@
+/* src/styles/DeleteAccountPage.css */
+
+.dap-container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  color: #0b0b0b;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.dap-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #ff5733, #ff8c42);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+.dap-input::placeholder {
+  color: #000000;
+  font-weight: 400;
+  opacity: 1;
+}
+
+
+.dap-success {
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.dap-error {
+  color: #c62828;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.dap-input {
+  width: 90%;
+  max-width: 500px;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+  border: 2px solid #090909;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #000;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dap-input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+.dap-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.dap-btn {
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dap-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.4s ease;
+}
+
+.dap-btn:hover::after {
+  left: 0;
+}
+
+/* Delete button */
+.dap-delete-btn {
+  background-color: #e74c3c;
+}
+
+.dap-delete-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(192, 57, 43, 0.4);
+}
+
+/* Cancel button */
+.dap-cancel-btn {
+  background-color: #3498db;
+}
+
+.dap-cancel-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(41, 128, 185, 0.4);
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .dap-input {
+    width: 100%;
+  }
+
+  .dap-button-group {
+    flex-direction: column;
+  }
+
+  .dap-btn {
+    width: 100%;
+  }
+}
+.dap-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

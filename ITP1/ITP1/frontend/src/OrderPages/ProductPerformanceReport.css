@@ -1,0 +1,111 @@
+/* Container Styling */
+.p-6 {
+    padding: 1.5rem;
+    background-color: #fff;
+    min-height: 100vh;
+    margin-top: 60px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Title Styling */
+  .text-xl {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Date Filters and Buttons */
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .gap-4 {
+    gap: 1rem;
+  }
+  
+  .border {
+    border: 1px solid #d1d5db;
+  }
+  
+  .p-2 {
+    padding: 0.5rem;
+  }
+  
+  .rounded {
+    border-radius: 0.375rem;
+  }
+  
+  .rounded-md {
+    border-radius: 0.5rem;
+  }
+  
+  /* Buttons */
+  .bg-green-600 {
+    background-color: #16a34a;
+  }
+  
+  .bg-green-600:hover {
+    background-color: #15803d;
+  }
+  
+  .bg-blue-600 {
+    background-color: #2563eb;
+  }
+  
+  .bg-blue-600:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  /* Table */
+  .w-full {
+    width: 100%;
+  }
+  
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  th,
+  td {
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+  }
+  
+  thead {
+    background-color: #f3f4f6;
+  }
+  
+  tbody tr:hover {
+    background-color: #f9fafb;
+  }
+  
+  /* Download Button Spacing */
+  .mt-6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  

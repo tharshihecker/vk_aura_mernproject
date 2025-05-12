@@ -1,0 +1,100 @@
+.admin-dashboard-container th{
+  background-color: #4b6cb7;
+    color: white;
+    font-weight: bold;
+}
+.removedate{
+  width: 80px;
+}
+.remove-user-address{
+  width: 150px;
+}
+.remove-email-phone{
+  width: 250px !important;
+}
+.resonR{
+  width: 200px;
+}
+.remove-name{
+  width: 100px;
+}
+.remove-prof
+{
+  width: 50px;
+}
+.admin-dashboard-container td {
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.admin-dashboard-container table,
+.admin-dashboard-container th,
+.admin-dashboard-container td {
+  color: #000000;
+  font-size: 0.9rem;
+  padding: 10px;
+  vertical-align: top;
+  text-align: left;
+  
+}
+
+
+.maincontent {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-left: 10%;
+    margin-right: -10%;
+    padding: 100px;
+    background-color: #ffffff; /* Solid white */
+    border: 10px solid #000000; /* Solid black */
+    color: #000000; /* Solid black text */
+     min-height: 50vh; /* Ensures minimum height */
+    overflow-y: auto; /* Only vertical scrolling if needed */
+    transition: margin-left 0.1s ease;
+  }
+  .go-back-btn {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #3498db;
+    color: #fff;
+    margin: 0.25em;
+  }
+  .go-back-btn:hover {background-color: #3498db;
+    transform: scale(1.05); }
+  
+  .admin-dashboard-container .maincontent .summary {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  .admin-dashboard-container .maincontent .summary p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  background: linear-gradient(45deg, #ff8c42, #ffd700);
+  background-clip: text;
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  margin-top: 45px; /* Added this line to move the header slightly down */
+}

@@ -1,0 +1,30 @@
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  background: linear-gradient(135deg, #f1f1f1, #f3f3f3); /* Gradient background */
+  border-radius: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+}
+
+.star-rating span {
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.star-rating span:hover {
+  transform: scale(1.2);
+}
+
+.emoji {
+  font-size: 30px;
+  margin-left: 10px;
+}

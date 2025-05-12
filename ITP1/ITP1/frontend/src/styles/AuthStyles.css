@@ -1,0 +1,68 @@
+/* Container for both Login and Signup */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form styles */
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .auth-form input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .auth-btn {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .auth-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Popup messages */
+  .error-popup, .success-popup {
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  
+  .error-popup {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .success-popup {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  /* Success Popup fade effect */
+  .success-popup {
+    animation: fadeOut 5s forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
