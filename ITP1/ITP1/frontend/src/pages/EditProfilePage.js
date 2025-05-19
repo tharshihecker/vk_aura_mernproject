@@ -55,12 +55,12 @@ const ProfilePage = () => {
   const uploadImageToCloudinary = async (file) => {
     const data = new FormData();
     data.append('file', file);
-    data.append('upload_preset', 'vkaura');
+    data.append('upload_preset', ''); //name
 
     try {
       setUploading(true);
       const response = await axios.post(
-        'https://api.cloudinary.com/v1_1/dsi3mcpie/upload',
+        '',// put your cloudinary api
         data
       );
       setUploading(false);
