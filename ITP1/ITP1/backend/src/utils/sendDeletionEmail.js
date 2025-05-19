@@ -9,8 +9,8 @@ const sendDeletionEmail = async (userDetails, reason) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: "heckerhackie@gmail.com", // Your Gmail
-        pass: "sobn xxxl ulca limx",     // App password        // Replace with your app password
+        user: "", // Your Gmail
+        pass: "",     // App password        // Replace with your app password
       },
     });
 
